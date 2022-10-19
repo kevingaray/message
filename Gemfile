@@ -41,3 +41,9 @@ gem 'net-smtp', require: false
 # install semantic
 gem 'jquery-rails'
 gem 'semantic-ui-sass'
+
+
+# add users
+gem 'bcrypt', '~> 3.1.7'
+# to see sheets in rails console : Hirb.enable
+gem 'hirb'
