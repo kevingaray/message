@@ -3,6 +3,6 @@
 # chatroom controller class
 class ChatroomController < ApplicationController
   def index
-    @messages = Text.all
+    @texts = Text.all
   end
 end
