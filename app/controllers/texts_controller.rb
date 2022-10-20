@@ -4,7 +4,7 @@ class TextsController < ApplicationController
   def create
     text = current_user.texts.build(text_params)
     if text.save
-      redirect_to root_path
+      ActionCable.server.broadcast "chatroom_channel", {foo: text.body}
     end
   end
 
