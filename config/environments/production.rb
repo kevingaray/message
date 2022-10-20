@@ -45,7 +45,7 @@ Rails.application.configure do
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
-  # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
+  config.action_cable.allowed_request_origins = [ 'https://messagekevg.herokuapp.com', 'http://messagekevg.herokuapp.com' ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
@@ -119,4 +119,7 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+
+  # to enable deploy in heroku
+  config.web_socket_server_url = "wss://messagekevg.herokuapp.com/cable" 
 end
