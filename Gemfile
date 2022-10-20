@@ -46,3 +46,7 @@ gem 'semantic-ui-sass'
 gem 'bcrypt', '~> 3.1.7'
 # to see sheets in rails console : Hirb.enable
 gem 'hirb'
+
+group :production do
+  gem 'redis', '~> 4.0'
+end
